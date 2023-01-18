@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "111234838473",
+    "project_id": "flavor-akaso",
+    "storage_bucket": "flavor-akaso.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111234838473:android:989482d61726631958c218",
+        "android_client_info": {
+          "package_name": "com.example.akaso"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "111234838473-dt01mavqbseqibgrtb3vkj3mvdt8696p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvzQAe5O7LCsKYfvPWc0cnTpjXYFtqnt0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "111234838473-dt01mavqbseqibgrtb3vkj3mvdt8696p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "111234838473-q3mr9o3as7tldb3igtqs5a6q8k6h5pim.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.akaso"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

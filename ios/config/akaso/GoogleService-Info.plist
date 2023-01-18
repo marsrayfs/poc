@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>111234838473-q3mr9o3as7tldb3igtqs5a6q8k6h5pim.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.111234838473-q3mr9o3as7tldb3igtqs5a6q8k6h5pim</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDbRqMtXZq7nfRLG5PM6jn9cEzWeFtpvGY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>111234838473</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.akaso</string>
+	<key>PROJECT_ID</key>
+	<string>flavor-akaso</string>
+	<key>STORAGE_BUCKET</key>
+	<string>flavor-akaso.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:111234838473:ios:f6f45209d5fef3b858c218</string>
+</dict>
+</plist>
