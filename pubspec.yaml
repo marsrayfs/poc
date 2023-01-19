@@ -47,7 +47,9 @@ dependencies:
   # Use   with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   intl: ^0.17.0
-  standalone_pkg: ^0.0.12
+  standalone_pkg: ^0.0.13
+  image_picker: ^0.8.6
+  cached_network_image: ^3.2.3
 
 dev_dependencies:
   flutter_test:
