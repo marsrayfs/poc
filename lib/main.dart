@@ -5,16 +5,19 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:poc/screens/sign_in_screen.dart';
 import 'package:standalone_pkg/domain/model/remote_config.dart';
 import 'package:standalone_pkg/domain/repository/firebase_configuration_repository_impl.dart';
+import 'package:standalone_pkg/domain/repository/firebase_file_upload_repository.dart';
 import 'package:standalone_pkg/domain/repository/firebase_register_repository_impl.dart';
 import 'package:standalone_pkg/domain/repository/firebase_send_email_verification_repository_impl.dart';
 import 'package:standalone_pkg/domain/repository/firebase_sign_in_repository_impl.dart';
 import 'package:standalone_pkg/domain/repository/firebase_user_repository_impl.dart';
 import 'package:standalone_pkg/domain/usecase/get_config_usecase.dart';
 import 'package:standalone_pkg/domain/usecase/register_usecase.dart';
+import 'package:standalone_pkg/domain/usecase/save_user_profile_picture_use_case.dart';
 import 'package:standalone_pkg/domain/usecase/send_email_verification_usecase.dart';
 import 'package:standalone_pkg/domain/usecase/sign_in_usecase.dart';
 import 'package:standalone_pkg/domain/usecase/user_usecase.dart';
 import 'package:standalone_pkg/presentation/config_bloc/config_bloc.dart';
+import 'package:standalone_pkg/presentation/profilepic_bloc/profilepic_bloc.dart';
 import 'package:standalone_pkg/presentation/register_bloc/register_bloc.dart';
 import 'package:standalone_pkg/presentation/sign_in_bloc/sign_in_bloc.dart';
 import 'package:standalone_pkg/presentation/user_bloc/user_bloc.dart';
@@ -55,6 +58,11 @@ class MyApp extends StatelessWidget {
         BlocProvider<UserBloc>(
             create: (BuildContext context) =>
                 UserBloc(UserUseCase(FirebaseUserRepositoryImpl()))),
+        BlocProvider<ProfilepicBloc>(
+            create: (BuildContext context) => ProfilepicBloc(
+                SaveUserProfilePictureUseCase(
+                    FirebaseFileUploadRepositoryImpl(),
+                    FirebaseUserRepositoryImpl()))),
       ],
       child: BlocConsumer<ConfigBloc, ConfigState>(
         listener: (context, state) {
