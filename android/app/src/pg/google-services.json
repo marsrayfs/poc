@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "338159895920",
+    "project_id": "flavor-pg",
+    "storage_bucket": "flavor-pg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338159895920:android:6d0b05ccd670d359bf7bb5",
+        "android_client_info": {
+          "package_name": "com.example.playgoose"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338159895920-5gjsqoajg2hkmmeim83mfn42b8dnadth.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjafyKz6BopdZ9koATrTYwwcQNlgLu-gI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338159895920-5gjsqoajg2hkmmeim83mfn42b8dnadth.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

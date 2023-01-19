@@ -285,7 +285,7 @@ packages:
       name: flutter_native_splash
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.2.17"
+    version: "2.2.16"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -323,7 +323,7 @@ packages:
       name: image
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.0.10"
+    version: "3.3.0"
   intl:
     dependency: transitive
     description:
@@ -433,7 +433,7 @@ packages:
       name: standalone_pkg
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.9"
+    version: "0.0.10"
   stream_channel:
     dependency: transitive
     description:

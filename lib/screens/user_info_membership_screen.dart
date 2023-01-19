@@ -60,6 +60,16 @@ class UserInfoMemberShipScreen extends StatelessWidget {
                             decoration:
                                 const InputDecoration(hintText: 'Lastname'),
                           ),
+                          FormBuilderTextField(
+                            name: "kanaFirstname",
+                            decoration: const InputDecoration(
+                                hintText: 'Kana Fistname'),
+                          ),
+                          FormBuilderTextField(
+                            name: "kanaLastname",
+                            decoration: const InputDecoration(
+                                hintText: 'Kana Lastname'),
+                          ),
                           const SizedBox(
                             height: 20,
                           ),
@@ -70,13 +80,15 @@ class UserInfoMemberShipScreen extends StatelessWidget {
                               onPressed: () {
                                 if (_formKey.currentState!.saveAndValidate()) {
                                   final user = User(
-                                      uid: '',
-                                      nickname: _formKey.currentState
-                                          ?.value[StringConstant.nickName],
-                                      firstname: _formKey.currentState
-                                          ?.value[StringConstant.firstName],
-                                      lastname: _formKey.currentState
-                                          ?.value[StringConstant.lastName]);
+                                    uid: '',
+                                    nickname: _formKey.currentState
+                                        ?.value[StringConstant.nickName],
+                                    firstname: _formKey.currentState
+                                        ?.value[StringConstant.firstName],
+                                    lastname: _formKey.currentState
+                                        ?.value[StringConstant.lastName],
+                                  );
+
                                   context
                                       .read<UserBloc>()
                                       .add(SaveUserInfo(user));
