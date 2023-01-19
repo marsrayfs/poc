@@ -325,7 +325,7 @@ packages:
     source: hosted
     version: "3.3.0"
   intl:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: intl
       url: "https://pub.dartlang.org"
@@ -433,7 +433,7 @@ packages:
       name: standalone_pkg
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.10"
+    version: "0.0.12"
   stream_channel:
     dependency: transitive
     description:

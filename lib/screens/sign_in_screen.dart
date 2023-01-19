@@ -68,72 +68,74 @@ class SignInScreen extends StatelessWidget {
           return Center(
             child: Padding(
               padding: const EdgeInsets.all(20),
-              child: Stack(
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Padding(
-                        padding: EdgeInsets.all(20),
-                        child: Text(
-                          'Sign In',
-                          style: TextStyle(
-                              fontSize: 30, fontWeight: FontWeight.bold),
+              child: SingleChildScrollView(
+                child: Stack(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.all(20),
+                          child: Text(
+                            'Sign In',
+                            style: TextStyle(
+                                fontSize: 30, fontWeight: FontWeight.bold),
+                          ),
                         ),
-                      ),
-                      const SizedBox(height: 40),
-                      TextFormField(
-                        decoration:
-                            const InputDecoration(hintText: 'Email Address'),
-                        controller: emailController,
-                      ),
-                      const SizedBox(height: 10),
-                      TextFormField(
-                        decoration: const InputDecoration(hintText: 'Password'),
-                        controller: passwordController,
-                        obscureText: true,
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      SizedBox(
-                        height: 50,
-                        width: double.infinity,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            context.read<SignInBloc>().add(SignIn(
-                                email: emailController.text,
-                                password: passwordController.text));
-                          },
-                          child: const Text("Sign In"),
+                        const SizedBox(height: 40),
+                        TextFormField(
+                          decoration:
+                              const InputDecoration(hintText: 'Email Address'),
+                          controller: emailController,
                         ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      SizedBox(
+                        const SizedBox(height: 10),
+                        TextFormField(
+                          decoration: const InputDecoration(hintText: 'Password'),
+                          controller: passwordController,
+                          obscureText: true,
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        SizedBox(
+                          height: 50,
                           width: double.infinity,
-                          child: TextButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const SignUpScreen()),
-                                );
-                              },
-                              child: const Text(
-                                'Sign Up',
-                                style: TextStyle(color: Colors.white),
-                              )))
-                    ],
-                  ),
-                  if (state is SignInLoading)
-                    const Center(
-                      child: CircularProgressIndicator(),
-                    )
-                ],
+                          child: ElevatedButton(
+                            onPressed: () {
+                              context.read<SignInBloc>().add(SignIn(
+                                  email: emailController.text,
+                                  password: passwordController.text));
+                            },
+                            child: const Text("Sign In"),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        SizedBox(
+                            width: double.infinity,
+                            child: TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const SignUpScreen()),
+                                  );
+                                },
+                                child: const Text(
+                                  'Sign Up',
+                                  style: TextStyle(color: Colors.white),
+                                )))
+                      ],
+                    ),
+                    if (state is SignInLoading)
+                      const Center(
+                        child: CircularProgressIndicator(),
+                      )
+                  ],
+                ),
               ),
             ),
           );
