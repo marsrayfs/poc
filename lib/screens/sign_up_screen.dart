@@ -32,57 +32,59 @@ class SignUpScreen extends StatelessWidget {
           return Center(
             child: Padding(
               padding: const EdgeInsets.all(20),
-              child: Stack(
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      TextFormField(
-                        decoration:
-                            const InputDecoration(hintText: 'Email Address'),
-                        controller: emailController,
-                      ),
-                      const SizedBox(height: 10),
-                      TextFormField(
-                        decoration: const InputDecoration(hintText: 'Password'),
-                        controller: passwordController,
-                        obscureText: true,
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      SizedBox(
-                        height: 50,
-                        width: double.infinity,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            context.read<RegisterBloc>().add(StartRegisterEvent(
-                                emailController.text, passwordController.text));
-                          },
-                          child: const Text("Sign Up"),
+              child: SingleChildScrollView(
+                child: Stack(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        TextFormField(
+                          decoration:
+                              const InputDecoration(hintText: 'Email Address'),
+                          controller: emailController,
                         ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      SizedBox(
+                        const SizedBox(height: 10),
+                        TextFormField(
+                          decoration: const InputDecoration(hintText: 'Password'),
+                          controller: passwordController,
+                          obscureText: true,
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        SizedBox(
+                          height: 50,
                           width: double.infinity,
-                          child: TextButton(
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                              },
-                              child: const Text(
-                                'Sign In',
-                                style: TextStyle(color: Colors.black87),
-                              )))
-                    ],
-                  ),
-                  if (state.state == RegisterStateEnum.loading)
-                    const Center(
-                      child: CircularProgressIndicator(),
-                    )
-                ],
+                          child: ElevatedButton(
+                            onPressed: () {
+                              context.read<RegisterBloc>().add(StartRegisterEvent(
+                                  emailController.text, passwordController.text));
+                            },
+                            child: const Text("Sign Up"),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        SizedBox(
+                            width: double.infinity,
+                            child: TextButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                                child: const Text(
+                                  'Sign In',
+                                  style: TextStyle(color: Colors.black87),
+                                )))
+                      ],
+                    ),
+                    if (state.state == RegisterStateEnum.loading)
+                      const Center(
+                        child: CircularProgressIndicator(),
+                      )
+                  ],
+                ),
               ),
             ),
           );
