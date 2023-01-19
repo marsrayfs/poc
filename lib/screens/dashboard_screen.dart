@@ -40,6 +40,11 @@ class DashBoardScreen extends StatelessWidget {
                     style: const TextStyle(
                         fontStyle: FontStyle.italic, fontSize: 20),
                   ),
+                  BottomNavigationBar(items: const [
+                    BottomNavigationBarItem(icon: Icon(Icons.abc), label: "hi"),
+                    BottomNavigationBarItem(
+                        icon: Icon(Icons.abc), label: "hello"),
+                  ]),
                 ],
               ),
             );

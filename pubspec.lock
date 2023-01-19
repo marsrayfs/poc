@@ -43,6 +43,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
+  bottom_navigation:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: master
+      resolved-ref: "40b81385a0d7a9e481987d8502aceb20e5587a07"
+      url: "https://github.com/Gerill-FST/BottomNavigation.git"
+    source: git
+    version: "0.0.1"
   characters:
     dependency: transitive
     description:
@@ -433,7 +442,7 @@ packages:
       name: standalone_pkg
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.10"
+    version: "0.0.11"
   stream_channel:
     dependency: transitive
     description:
@@ -498,5 +507,5 @@ packages:
     source: hosted
     version: "3.1.1"
 sdks:
-  dart: ">=2.18.2 <3.0.0"
+  dart: ">=2.18.5 <3.0.0"
   flutter: ">=3.0.0"
